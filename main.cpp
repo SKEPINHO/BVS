@@ -17,5 +17,5 @@ int main()
 
     strom.vypisDoHloubky();
     std::cout << std::endl <<
-        (strom.jeVeStrome(5) ? "true" : "false");
+        (strom.jeVeStrome(7) ? "true" : "false");
 }
