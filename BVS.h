@@ -9,6 +9,7 @@ public:
 	~BVS();
 	void vloz(int hodnota);
 	void vypisDoHloubky();
+    void vypisDoSirky();
 	bool jeVeStrome(int hodnota);
 	//void smaz(int hodnota);
 private:

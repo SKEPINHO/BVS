@@ -15,7 +15,8 @@ int main()
     strom.vloz(30);
     strom.vloz(25);
 
-    strom.vypisDoHloubky();
-    std::cout << std::endl <<
-        (strom.jeVeStrome(7) ? "true" : "false");
+   // strom.vypisDoHloubky();
+    strom.vypisDoSirky();
+   //std::cout << std::endl <<
+   //   (strom.jeVeStrome(25) ? "true" : "false");
 }

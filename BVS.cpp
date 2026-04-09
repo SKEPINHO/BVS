@@ -1,6 +1,7 @@
 #include "BVS.h"
 
 #include <iostream>
+#include <queue>
 
 #include "BVSItem.h"
 
@@ -52,6 +53,28 @@ void BVS::vypisDoHloubky()
 	vypisDoHloubky(mKoren);
 }
 
+void BVS::vypisDoSirky()
+{
+    if (mKoren == nullptr)
+        return;
+
+    std::queue<BVSItem*> fronta;
+    fronta.push(mKoren);
+
+    while (!fronta.empty())
+    {
+        BVSItem* aktualni = fronta.front();
+        fronta.pop();
+
+        std::cout << aktualni->mHodnota << " ";
+
+        if (aktualni->mLevy != nullptr)
+            fronta.push(aktualni->mLevy);
+        if (aktualni->mPravy != nullptr)
+            fronta.push(aktualni->mPravy);
+    }
+}
+
 void BVS::vypisDoHloubky(BVSItem* prvek)
 {
 	if (prvek == nullptr)
@@ -77,4 +100,3 @@ bool BVS::jeVeStrome(int hodnota)
 
 	return false;
 }
-
