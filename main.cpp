@@ -14,7 +14,7 @@ int main()
     strom.vloz(17);
     strom.vloz(30);
     strom.vloz(25);
-
+ 
    // strom.vypisDoHloubky();
     strom.vypisDoSirky();
    //std::cout << std::endl <<
